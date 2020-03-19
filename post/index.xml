@@ -2,26 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on River</title>
-    <link>https://riverlee2014.github.io/post/</link>
+    <link>http://riverlee2014.github.io/post/</link>
     <description>Recent content in Posts on River</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Jan 2020 16:24:33 +0800</lastBuildDate>
     
-	<atom:link href="https://riverlee2014.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://riverlee2014.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Consul DNS SRV 服务发现</title>
-      <link>https://riverlee2014.github.io/post/consul-dns-srv/</link>
+      <link>http://riverlee2014.github.io/post/consul-dns-srv/</link>
       <pubDate>Mon, 13 Jan 2020 16:24:33 +0800</pubDate>
       
-      <guid>https://riverlee2014.github.io/post/consul-dns-srv/</guid>
+      <guid>http://riverlee2014.github.io/post/consul-dns-srv/</guid>
       <description>前言 根据 Consul 官方文档的说明，它提供了二种类型的 API 接口：HTTP / DNS 。HTTP 是非常容易理解的应用场景，基本上大多数开发语言的 Client SDK 都是基于 HTTP 接口封装的。而本文的重点是实验另一种接口 DNS ，以及它可能的应用场景。
 DNS 是一种非常古老的协议，在网络发展史上已经存在比较久，基本上现代大多数操作系统都内置了解析 DNS 的功能。DNS 也是有服务发现、负载均衡、权重控制等能力。最常见的 Linux 发行版下都带有 dig、nslookup 等命令，用来探测解析 DNS 域名。下面，我们来了解一下 Consul DNS API 的玩法。
 准备 假设您已经正确安装完一个 consul cluster，现在先正常注册一个 service 上去。比如，您机器上装了一个服务叫做 hugo，端点提供在 1313 端口。注册信息：
-{&amp;#34;service&amp;#34;: {&amp;#34;name&amp;#34;: &amp;#34;hugo&amp;#34;,&amp;#34;tags&amp;#34;: [&amp;#34;sit&amp;#34;],&amp;#34;port&amp;#34;: 1313,&amp;#34;check&amp;#34;: {&amp;#34;tcp&amp;#34;: &amp;#34;127.0.0.1:1313&amp;#34;,&amp;#34;interval&amp;#34;: &amp;#34;10s&amp;#34;,&amp;#34;timeout&amp;#34;: &amp;#34;1s&amp;#34;}}}注册成功，UI 看起来像如下：
-查询 consul 的默认 dns 接口暴露在 8600 端口上，而操作系统默认的 DNS 端口为 53 （ 需要 root 权限才能暴露），我们先用 8600 进行 DNS查询：</description>
+{&amp;#34;service&amp;#34;: {&amp;#34;name&amp;#34;: &amp;#34;hugo&amp;#34;,&amp;#34;tags&amp;#34;: [&amp;#34;sit&amp;#34;],&amp;#34;port&amp;#34;: 1313,&amp;#34;check&amp;#34;: {&amp;#34;tcp&amp;#34;: &amp;#34;127.0.0.1:1313&amp;#34;,&amp;#34;interval&amp;#34;: &amp;#34;10s&amp;#34;,&amp;#34;timeout&amp;#34;: &amp;#34;1s&amp;#34;}}}注册成功，UI 看起来像如下： 查询 Consul 的默认 dns 接口暴露在 8600 端口上，而操作系统默认的 DNS 端口为 53 （ 需要 root 权限才能暴露），我们先用 8600 进行 DNS 查询：</description>
     </item>
     
   </channel>
